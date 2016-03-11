@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top:50px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Book List</h1>
+
+			<ul>
+			<% for(i = 0; i<books.length; i++ ) { %>
+			  <% var url = "/books/" + (i+1); %>
+			  <li>
+				<a href="<%= url %>">
+				  <%= books[i].title %>
+				</a>
+			<% } %>
+			</ul>
+        </div>
+    </div>
+    
+</body>
+</html>
